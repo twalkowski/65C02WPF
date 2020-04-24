@@ -1,0 +1,9 @@
+﻿<Application x:Class="_65C02WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_65C02WPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="65C02Styles.xaml" />
+    </Application.Resources>
+</Application>
