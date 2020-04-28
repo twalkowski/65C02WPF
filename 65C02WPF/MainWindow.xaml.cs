@@ -26,6 +26,8 @@ namespace _65C02WPF
         {
             myCpu.Reset();
             myMemory.Initialize();
+            ViewModel.Instructions = 0;
+            ViewModel.Cycles = 0L;
             ViewModel.UpdateView(myCpu);
             ViewModel.HexDump = ViewModel.DumpMemAsHex(myMemory, ViewModel.Page);
         }
@@ -33,6 +35,8 @@ namespace _65C02WPF
         private void Step_Click(object sender, RoutedEventArgs e)
         {
             myCpu.Step();
+            ViewModel.Instructions += 1;
+            ViewModel.Cycles += 3;
             ViewModel.UpdateView(myCpu);
         }
 

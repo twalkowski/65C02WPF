@@ -12,7 +12,39 @@ namespace _65C02WPF
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        /// <summary>   The accumulator. </summary>
+        // Statitics
+
+        private int instructions;
+        public int Instructions
+        {
+            get { return instructions; }
+            set
+            {
+                if (instructions != value)
+                {
+                    instructions = value;
+                    OnPropertyChanged(nameof(Instructions));
+                }
+            }
+        }
+
+        private ulong cycles;
+        public ulong Cycles
+        {
+            get { return cycles; }
+            set
+            {
+                if (cycles != value)
+                {
+                    cycles = value;
+                    OnPropertyChanged(nameof(Cycles));
+                }
+            }
+        }
+
+
+        // CPU
+
         private int accumulator;
         public int Accumulator
         {
@@ -27,9 +59,8 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The X register. </summary>
-        private byte xRegister;
-        public byte XRegister
+        private int xRegister;
+        public int XRegister
         {
             get { return xRegister; }
             set
@@ -42,7 +73,6 @@ namespace _65C02WPF
             }
         }
 
-        /// The Y register. </summary>
         private int yRegister;
         public int YRegister
         {
@@ -57,7 +87,6 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The stack pointer. </summary>
         private int stackPointer;
         public int StackPointer
         {
@@ -72,7 +101,6 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The program counter. </summary>
         private int programCounter;
         public int ProgramCounter
         {
@@ -87,9 +115,8 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The status register. </summary>
-        private byte statusRegister;
-        public byte StatusRegister
+        private int statusRegister;
+        public int StatusRegister
         {
             get { return statusRegister; }
             set
@@ -102,7 +129,6 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The CPU data bus. </summary>
         private int data;
         public int Data
         {
@@ -117,7 +143,6 @@ namespace _65C02WPF
             }
         }
 
-        /// <summary>   The CPU address bus. </summary>
         private int address;
         public int Address
         {
@@ -128,34 +153,6 @@ namespace _65C02WPF
                 {
                     address = value;
                     OnPropertyChanged(nameof(Address));
-                }
-            }
-        }
-
-        private int page = 0;
-        public int Page
-        {
-            get { return page; }
-            set
-            {
-                if (page != value)
-                {
-                    page = value;
-                    OnPropertyChanged(nameof(Page));
-                }
-            }
-        }
-
-        private string hexDump;
-        public string HexDump
-        {
-            get { return hexDump; }
-            set
-            {
-                if (hexDump != value)
-                {
-                    hexDump = value;
-                    OnPropertyChanged(nameof(HexDump));
                 }
             }
         }
@@ -222,7 +219,7 @@ namespace _65C02WPF
             get { return iFlag; }
             set
             {
-                if (iFlag = value)
+                if (iFlag != value)
                 {
                     iFlag = value;
                     OnPropertyChanged(nameof(IFlag));
@@ -257,6 +254,38 @@ namespace _65C02WPF
                 }
             }
         }
+
+        // Memory
+
+        private int page = 0;
+        public int Page
+        {
+            get { return page; }
+            set
+            {
+                if (page != value)
+                {
+                    page = value;
+                    OnPropertyChanged(nameof(Page));
+                }
+            }
+        }
+
+        private string hexDump;
+        public string HexDump
+        {
+            get { return hexDump; }
+            set
+            {
+                if (hexDump != value)
+                {
+                    hexDump = value;
+                    OnPropertyChanged(nameof(HexDump));
+                }
+            }
+        }
+
+        // Public Methods
 
         public void UpdateView(CPU cpu)
         {
