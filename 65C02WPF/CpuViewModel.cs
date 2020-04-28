@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace _65C02WPF
 {
@@ -29,7 +26,7 @@ namespace _65C02WPF
                 }
             }
         }
- 
+
         /// <summary>   The X register. </summary>
         private byte xRegister;
         public byte XRegister
@@ -92,7 +89,7 @@ namespace _65C02WPF
 
         /// <summary>   The status register. </summary>
         private byte statusRegister;
-                public byte StatusRegister
+        public byte StatusRegister
         {
             get { return statusRegister; }
             set
@@ -271,7 +268,7 @@ namespace _65C02WPF
             StatusRegister = cpu.SR;
             Address = cpu.AddressBus;
             Data = cpu.DataBus;
-            
+
             NFlag = cpu.N;
             VFlag = cpu.V;
             BFlag = cpu.B;
@@ -287,7 +284,7 @@ namespace _65C02WPF
             StringBuilder charString = new StringBuilder("    ");
             int i;
             int v;
- 
+
             for (int row = 0; row < 16; row++)
             {
                 hexString.Append(string.Format("{0:x4}:  ", (page << 8 | row << 4)));

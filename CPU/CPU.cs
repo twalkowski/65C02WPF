@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _65C02WPF
+﻿namespace _65C02WPF
 {
     public class CPU
     {
@@ -65,7 +59,7 @@ namespace _65C02WPF
 
             // TODO  code to execute a single instruction
         }
-        
+
         private byte ConvertFlagsToSR()
         {
             int v = ((N ? 0x80 : 0)
@@ -78,13 +72,13 @@ namespace _65C02WPF
                   + (C ? 0x01 : 0)
                   );
             return (byte)v;
-        }  
+        }
 
         private void ConvertSRToFlags(byte value)
         {
             N = (value & 0x80) != 0;
             V = (value & 0x40) != 0;
-            B = (value & 0x10) != 0;     
+            B = (value & 0x10) != 0;
             D = (value & 0x08) != 0;
             I = (value & 0x04) != 0;
             Z = (value & 0x02) != 0;
