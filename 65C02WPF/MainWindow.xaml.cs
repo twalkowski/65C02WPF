@@ -16,11 +16,11 @@ namespace _65C02WPF
 
             // Set up the Viewmodel to display data deom the CPU and memory
             // then set the data contexct for the XAML to link to the ViewModel
-            this.ViewModel = new CpuViewModel();
+            this.ViewModel = new MainWindowDataContext();
             this.DataContext = ViewModel;
         }
 
-        CpuViewModel ViewModel { get; set; }
+        MainWindowDataContext ViewModel { get; set; }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {

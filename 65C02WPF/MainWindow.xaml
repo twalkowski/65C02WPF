@@ -7,8 +7,12 @@
     <Window.Resources>
         <local:IntToHexConverter x:Key="intHexConverter"/>
     </Window.Resources>
+    
+    <Window.DataContext>
+        <local:MainWindowDataContext/>
+    </Window.DataContext>
 
-    <Grid Margin="20,0,0,20" RenderTransformOrigin="0.525,0.251" MinWidth="800" MinHeight="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid Margin="20,0,0,20" MinWidth="800" MinHeight="400" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="80*" />
             <RowDefinition Height="319*" />
