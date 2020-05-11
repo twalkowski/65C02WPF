@@ -1,5 +1,8 @@
 ﻿namespace _65C02WPF
 {
+    /// <summary>
+    /// This represents the 65C02 CPU model along with an Address bus and a DATA bus
+    /// </summary>
     public class CPU
     {
         public int A;
@@ -67,7 +70,9 @@
             ConvertSRToFlags(SR);
 
 
-            // TODO  code to execute a single instruction
+            /// 
+            /// TODO  code to execute a single instruction
+            /// 
         }
 
         private byte ConvertFlagsToSR()

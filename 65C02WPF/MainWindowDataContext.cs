@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System.Windows.Controls;
 
 namespace _65C02WPF
 {
@@ -8,14 +7,16 @@ namespace _65C02WPF
         // Statitics
 
         private int _instructions;
-        public int Instructions
+        public int Instructions         /// The number of CPU instructions executed by the simulator
         {
             get => _instructions;
             set => Set(ref _instructions, value);
         }
 
+
         private ulong _cycles;
-        public ulong Cycles
+        public ulong Cycles             /// The number of machine cycles executed by the simulator
+
         {
             get => _cycles;
             set => Set(ref _cycles, value);
@@ -132,14 +133,14 @@ namespace _65C02WPF
         // Memory
 
         private int _page = 0;
-        public int Page
+        public int Page                     /// The 256-byte page of memory to display
         {
             get => _page;
             set => Set(ref _page, value);
         }
 
         private string _hexDump;
-        public string HexDump
+        public string HexDump               /// the memory page as a string of hex digits and ascii characters
         {
             get => _hexDump;
             set => Set(ref _hexDump, value);
@@ -147,7 +148,11 @@ namespace _65C02WPF
 
         // Public Methods
 
-        public void UpdateView(CPU cpu)
+            /// <summary>
+            /// Populate the data context for the simulator with the CPU registers and flags
+            /// </summary>
+            /// <param name="cpu">The instance of CPU to display</param>
+        public void DisplayCpuData(CPU cpu)
         {
             Accumulator = cpu.A;
             XRegister = cpu.X;
@@ -167,7 +172,13 @@ namespace _65C02WPF
             CFlag = cpu.C;
         }
 
-        public string DumpMemAsHex(Memory mem, int page)
+        /// <summary>
+        /// Display the the memory bytes in a page as both hexadecimal digits and ascii characters
+        /// </summary>
+        /// <param name="mem">The Memory instance display</param>
+        /// <param name="page">the 256-byte page to display</param>
+        /// <returns>a string repersentation of the memory page</returns>
+        public string DisplayMemoryPageAsHexDump(Memory mem, int page)
         {
             StringBuilder hexString = new StringBuilder("");
             StringBuilder charString = new StringBuilder("    ");
@@ -207,6 +218,5 @@ namespace _65C02WPF
 
             return hexString.ToString();
         }
-
     }
 }
