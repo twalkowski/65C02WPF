@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observableobject_23',['ObservableObject',['../class__65_c02_w_p_f_1_1_observable_object.html',1,'_65C02WPF']]]
+  ['observableobject_29',['ObservableObject',['../class__65_c02_w_p_f_1_1_observable_object.html',1,'_65C02WPF']]]
 ];

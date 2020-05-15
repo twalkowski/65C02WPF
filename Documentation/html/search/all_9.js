@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raisepropertychanged_14',['RaisePropertyChanged',['../class__65_c02_w_p_f_1_1_observable_object.html#a4c4dae3a340c450730ad298cf7848bc7',1,'_65C02WPF::ObservableObject']]]
+  ['page_17',['Page',['../class__65_c02_w_p_f_1_1_main_window_data_context.html#a1fb729926151163cdf4f323658f29426',1,'_65C02WPF::MainWindowDataContext']]]
 ];

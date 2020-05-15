@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hexdump_31',['HexDump',['../class__65_c02_w_p_f_1_1_main_window_data_context.html#a36104c5883db666ca76b80f3c4eede67',1,'_65C02WPF::MainWindowDataContext']]]
+  ['decimalseparator_40',['DecimalSeparator',['../class__65_c02_w_p_f_1_1_numeric_text_box.html#a6edcd26cbec4d7d878ab3682909d29b4',1,'_65C02WPF::NumericTextBox']]]
 ];

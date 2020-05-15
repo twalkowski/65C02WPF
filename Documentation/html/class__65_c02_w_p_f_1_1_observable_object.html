@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class to simplify the setters for data context proerties bound to UI properties. It implements the INotifyProertyChagned inteface  
+<p>A class to simplify the setters for data context properties bound to UI properties. It implements the INotifyPropertyChanged inteface  
  <a href="class__65_c02_w_p_f_1_1_observable_object.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for _65C02WPF.ObservableObject:</div>
@@ -82,17 +82,17 @@ Inheritance diagram for _65C02WPF.ObservableObject:</div>
  <div class="center">
   <img src="class__65_c02_w_p_f_1_1_observable_object.png" usemap="#_5F65C02WPF.ObservableObject_map" alt=""/>
   <map id="_5F65C02WPF.ObservableObject_map" name="_5F65C02WPF.ObservableObject_map">
-<area href="class__65_c02_w_p_f_1_1_main_window_data_context.html" alt="_65C02WPF.MainWindowDataContext" shape="rect" coords="0,112,227,136"/>
+<area href="class__65_c02_w_p_f_1_1_main_window_data_context.html" title="The data context for the simulator display" alt="_65C02WPF.MainWindowDataContext" shape="rect" coords="0,112,227,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4c4dae3a340c450730ad298cf7848bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__65_c02_w_p_f_1_1_observable_object.html#a4c4dae3a340c450730ad298cf7848bc7">RaisePropertyChanged</a> (string propertyName)</td></tr>
-<tr class="memdesc:a4c4dae3a340c450730ad298cf7848bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to raise the PropertChanged event  <a href="class__65_c02_w_p_f_1_1_observable_object.html#a4c4dae3a340c450730ad298cf7848bc7">More...</a><br /></td></tr>
+<tr class="memdesc:a4c4dae3a340c450730ad298cf7848bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to raise the PropertyChanged event  <a href="class__65_c02_w_p_f_1_1_observable_object.html#a4c4dae3a340c450730ad298cf7848bc7">More...</a><br /></td></tr>
 <tr class="separator:a4c4dae3a340c450730ad298cf7848bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c4cb10cc6b765a7c807ea45b09f655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__65_c02_w_p_f_1_1_observable_object.html#a90c4cb10cc6b765a7c807ea45b09f655">Set&lt; T &gt;</a> (ref T field, T newValue, [CallerMemberName] string propertyName=null)</td></tr>
-<tr class="memdesc:a90c4cb10cc6b765a7c807ea45b09f655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set the backing field of a property - if the value has changed - and raise the ProertyChanged event  <a href="class__65_c02_w_p_f_1_1_observable_object.html#a90c4cb10cc6b765a7c807ea45b09f655">More...</a><br /></td></tr>
+<tr class="memdesc:a90c4cb10cc6b765a7c807ea45b09f655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set the backing field of a property - if the value has changed - and raise the PropertyChanged event  <a href="class__65_c02_w_p_f_1_1_observable_object.html#a90c4cb10cc6b765a7c807ea45b09f655">More...</a><br /></td></tr>
 <tr class="separator:a90c4cb10cc6b765a7c807ea45b09f655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
@@ -102,7 +102,7 @@ PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="separator:ac90bd9068cc8a58e9e4f3e870e5d5712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class to simplify the setters for data context proerties bound to UI properties. It implements the INotifyProertyChagned inteface </p>
+<div class="textblock"><p>A class to simplify the setters for data context properties bound to UI properties. It implements the INotifyPropertyChanged inteface </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4c4dae3a340c450730ad298cf7848bc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c4dae3a340c450730ad298cf7848bc7">&#9670;&nbsp;</a></span>RaisePropertyChanged()</h2>
@@ -128,10 +128,10 @@ PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><
 </table>
 </div><div class="memdoc">
 
-<p>method to raise the PropertChanged event </p>
+<p>method to raise the PropertyChanged event </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">propertyName</td><td>the propert needindg to raise the event</td></tr>
+    <tr><td class="paramname">propertyName</td><td>the property raising the event</td></tr>
   </table>
   </dd>
 </dl>
@@ -178,7 +178,7 @@ PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><
 </table>
 </div><div class="memdoc">
 
-<p>Method to set the backing field of a property - if the value has changed - and raise the ProertyChanged event </p>
+<p>Method to set the backing field of a property - if the value has changed - and raise the PropertyChanged event </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>the property type</td></tr>
@@ -189,7 +189,7 @@ PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><
   <table class="params">
     <tr><td class="paramname">field</td><td>the property's backing field</td></tr>
     <tr><td class="paramname">newValue</td><td>the new value</td></tr>
-    <tr><td class="paramname">propertyName</td><td>the name of the property. Of omitted, it is the name of the calling member</td></tr>
+    <tr><td class="paramname">propertyName</td><td>the name of the property. If omitted, it is the name of the calling member</td></tr>
   </table>
   </dd>
 </dl>

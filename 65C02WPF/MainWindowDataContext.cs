@@ -2,6 +2,12 @@
 
 namespace _65C02WPF
 {
+    /// <summary>
+    /// The data context for the simulator display
+    /// 
+    /// This class implements properties to bind to the UI elements.  It also includes methods to 
+    /// get the current state of the cpu and memory.
+    /// </summary>
     class MainWindowDataContext : ObservableObject
     {
         // Statitics
@@ -14,8 +20,8 @@ namespace _65C02WPF
         }
 
 
-        private ulong _cycles;
-        public ulong Cycles             /// The number of machine cycles executed by the simulator
+        private int _cycles;
+        public int Cycles             /// The number of machine cycles executed by the simulator
 
         {
             get => _cycles;
@@ -130,6 +136,7 @@ namespace _65C02WPF
             set => Set(ref _cFlag, value);
         }
 
+
         // Memory
 
         private int _page = 0;
@@ -146,12 +153,14 @@ namespace _65C02WPF
             set => Set(ref _hexDump, value);
         }
 
+
+
         // Public Methods
 
-            /// <summary>
-            /// Populate the data context for the simulator with the CPU registers and flags
-            /// </summary>
-            /// <param name="cpu">The instance of CPU to display</param>
+        /// <summary>
+        /// Populate the data context for the simulator with the CPU registers and flags
+        /// </summary>
+        /// <param name="cpu">The instance of CPU to display</param>
         public void DisplayCpuData(CPU cpu)
         {
             Accumulator = cpu.A;

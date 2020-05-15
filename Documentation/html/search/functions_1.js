@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raisepropertychanged_27',['RaisePropertyChanged',['../class__65_c02_w_p_f_1_1_observable_object.html#a4c4dae3a340c450730ad298cf7848bc7',1,'_65C02WPF::ObservableObject']]]
+  ['onpreviewtextinput_33',['OnPreviewTextInput',['../class__65_c02_w_p_f_1_1_numeric_text_box.html#a13089924d140cabc3bc1d7f75c398699',1,'_65C02WPF::NumericTextBox']]]
 ];
