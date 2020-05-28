@@ -10,25 +10,6 @@ namespace _65C02WPF
     /// </summary>
     class MainWindowDataContext : ObservableObject
     {
-        // Statitics
-
-        private int _instructions;
-        public int Instructions         /// The number of CPU instructions executed by the simulator
-        {
-            get => _instructions;
-            set => Set(ref _instructions, value);
-        }
-
-
-        private int _cycles;
-        public int Cycles             /// The number of machine cycles executed by the simulator
-
-        {
-            get => _cycles;
-            set => Set(ref _cycles, value);
-        }
-
-
         // CPU
 
         private int _accumulator;
@@ -136,6 +117,23 @@ namespace _65C02WPF
             set => Set(ref _cFlag, value);
         }
 
+        // Statitics
+
+        private int _instructions;
+        public int Instructions         /// The number of CPU instructions executed by the simulator
+        {
+            get => _instructions;
+            set => Set(ref _instructions, value);
+        }
+
+
+        private int _cycles;
+        public int Cycles             /// The number of machine cycles executed by the simulator
+
+        {
+            get => _cycles;
+            set => Set(ref _cycles, value);
+        }
 
         // Memory
 

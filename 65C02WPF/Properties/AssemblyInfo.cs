@@ -8,7 +8,7 @@ using System.Windows;
 [assembly: AssemblyTitle("65C02WPF")]
 [assembly: AssemblyDescription("A microprocessor emulator for the 65C02")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Yippie Skippie")]
 [assembly: AssemblyProduct("65C02WPF")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

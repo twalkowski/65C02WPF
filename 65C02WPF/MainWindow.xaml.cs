@@ -23,7 +23,7 @@ namespace _65C02WPF
             DC.Instructions = 0;
             DC.Cycles = 0;
             DC.DisplayCpuData(myCpu);
-            DC.HexDump = DC.DisplayMemoryPageAsHexDump(myMemory, DC.Page);
+            RefreshMemoryDisplay();
         }
 
         private void Step_Click(object sender, RoutedEventArgs e)
@@ -32,11 +32,13 @@ namespace _65C02WPF
             DC.Instructions += 1;
             DC.Cycles += 3;
             DC.DisplayCpuData(myCpu);
+            RefreshMemoryDisplay();
         }
+
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             DC.Page = (DC.Page + 1) & 0xff;
-            DC.HexDump = DC.DisplayMemoryPageAsHexDump(myMemory, DC.Page);
+            RefreshMemoryDisplay();
 
         }
 
@@ -51,8 +53,17 @@ namespace _65C02WPF
                 DC.Page--;
             }
 
-            DC.HexDump = DC.DisplayMemoryPageAsHexDump(myMemory, DC.Page);
+            RefreshMemoryDisplay();
+        }
 
+        private void RefreshMemoryDisplay()
+        {
+            DC.HexDump = DC.DisplayMemoryPageAsHexDump(myMemory, DC.Page);
+        }
+
+        private void Page_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshMemoryDisplay();
         }
     }
 }

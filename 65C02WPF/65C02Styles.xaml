@@ -4,7 +4,6 @@
  
     <Style TargetType="TextBox">
         <Setter Property="FontFamily" Value="Consolas"/>
-        <Setter Property="FontSize" Value="12" />
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextWrapping" Value="NoWrap"/>
