@@ -63,6 +63,18 @@
                     <TextBlock TextWrapping="Wrap" Text="Data Bus: " HorizontalAlignment="Right" Width="100"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Data, StringFormat='x2', Mode=OneWay}" IsReadOnly="True"/>
                 </StackPanel>
+                <GroupBox Header="Flags" Grid.Row="1" Grid.Column="1" Margin="4,4,20,4" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="4,4,4,4" Orientation="Horizontal">
+                        <CheckBox Content="N" IsChecked="{Binding NFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="V" IsChecked="{Binding VFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="-" IsChecked="True" IsEnabled="False" />
+                        <CheckBox Content="B" IsChecked="{Binding BFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="D" IsChecked="{Binding DFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="I" IsChecked="{Binding IFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="Z" IsChecked="{Binding ZFlag, Mode=OneWay}" IsEnabled="False"/>
+                        <CheckBox Content="C" IsChecked="{Binding CFlag, Mode=OneWay}" IsEnabled="False"/>
+                    </StackPanel>
+                </GroupBox>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="8,0,0,0">
                     <TextBlock TextWrapping="Wrap" Text="Instructions: " HorizontalAlignment="Right" Width="100"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Instructions, Mode=OneWay}" IsReadOnly="True"/>
@@ -71,28 +83,16 @@
                     <TextBlock TextWrapping="Wrap" Text="Cycles as Hex: " HorizontalAlignment="Right" Width="100"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Cycles, Mode=OneWay}" IsReadOnly="True" />
                 </StackPanel>
-            </StackPanel>
-        </GroupBox>
 
-        <GroupBox Header="Flags" Grid.Row="1" Grid.Column="1" Margin="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel Grid.Row="1" Grid.Column="1" Margin="4,4,4,4">
-                <CheckBox Content="N" IsChecked="{Binding NFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="V" IsChecked="{Binding VFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="-" IsChecked="True" IsEnabled="False" />
-                <CheckBox Content="B" IsChecked="{Binding BFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="D" IsChecked="{Binding DFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="I" IsChecked="{Binding IFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="Z" IsChecked="{Binding ZFlag, Mode=OneWay}" IsEnabled="False"/>
-                <CheckBox Content="C" IsChecked="{Binding CFlag, Mode=OneWay}" IsEnabled="False"/>
             </StackPanel>
         </GroupBox>
 
         <GroupBox Header="Memory" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Margin="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Orientation="Vertical">
                 <StackPanel Margin="4,4,4,4"  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
-                    <Button Height="20" Click="Page_Click">Page</Button>
+                    <Button Height="20" Click="Page_Click">Go to page</Button>
 
-                    <TextBox Margin="8,0,0,0">
+                    <TextBox VerticalAlignment="Top" Margin="4,0,4,0">
                         <TextBox.Text>
                             <Binding Path="Page" StringFormat="x3" Converter="{StaticResource ConvertHexToDec}" >
                                 <Binding.ValidationRules>
@@ -101,7 +101,7 @@
                             </Binding>
                         </TextBox.Text>
                     </TextBox>
-                    
+
                     <RepeatButton x:Name="Next" Content="&#x21e7;" Height="20" Width="20" FontWeight="Bold" Foreground="Black" Click="Next_Click"/>
                     <RepeatButton x:Name="Prev" Content="&#x21e9;" Height="20" Width="20" FontWeight="Bold" Foreground="Black" Click="Prev_Click"/>
                 </StackPanel>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numerictextbox_14',['NumericTextBox',['../class__65_c02_w_p_f_1_1_numeric_text_box.html',1,'_65C02WPF']]]
+  ['observableobject_14',['ObservableObject',['../class__65_c02_w_p_f_1_1_observable_object.html',1,'_65C02WPF']]]
 ];

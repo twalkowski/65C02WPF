@@ -17,7 +17,7 @@ namespace _65C02WPF
         /// <param name="propertyName">the property raising the event</param>
         protected void RaisePropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); 
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>

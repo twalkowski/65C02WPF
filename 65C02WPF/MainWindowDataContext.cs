@@ -152,7 +152,6 @@ namespace _65C02WPF
         }
 
 
-
         // Public Methods
 
         /// <summary>

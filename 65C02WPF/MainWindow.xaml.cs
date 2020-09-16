@@ -8,7 +8,7 @@ namespace _65C02WPF
     public partial class MainWindow : Window
     {
         public CPU myCpu = new CPU();
-        public Memory myMemory = new Memory(256 * 256);
+        public Memory myMemory = new Memory(0x10000);
         private MainWindowDataContext DC => (MainWindowDataContext)DataContext;
 
         public MainWindow()

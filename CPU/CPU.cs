@@ -8,7 +8,7 @@
         public int A;
         public int X;
         public int Y;
-        
+
         private int sp;
         public int SP
         {

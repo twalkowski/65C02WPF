@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['displaycpudata_31',['DisplayCpuData',['../class__65_c02_w_p_f_1_1_main_window_data_context.html#ae9a7183f74c98268f5608230b0866e80',1,'_65C02WPF::MainWindowDataContext']]],
-  ['displaymemorypageashexdump_32',['DisplayMemoryPageAsHexDump',['../class__65_c02_w_p_f_1_1_main_window_data_context.html#af547e63f5c600b77f20368a4b0d122f0',1,'_65C02WPF::MainWindowDataContext']]]
+  ['convert_30',['Convert',['../class__65_c02_w_p_f_1_1_hex_converter.html#a1803857fd4bfac3309eac9f2f4f7e54e',1,'_65C02WPF::HexConverter']]],
+  ['convertback_31',['ConvertBack',['../class__65_c02_w_p_f_1_1_hex_converter.html#ae17831254afc51a290f6f63ddd4e2c1d',1,'_65C02WPF::HexConverter']]]
 ];
