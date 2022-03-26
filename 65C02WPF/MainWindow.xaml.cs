@@ -7,8 +7,8 @@ namespace _65C02WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public CPU myCpu = new CPU();
-        public Memory myMemory = new Memory(0x10000);
+        CPU myCpu = new CPU();
+        Memory myMemory = new Memory(0x10000);
         private MainWindowDataContext DC => (MainWindowDataContext)DataContext;
 
         public MainWindow()
@@ -28,7 +28,7 @@ namespace _65C02WPF
 
         private void Step_Click(object sender, RoutedEventArgs e)
         {
-            myCpu.Step();
+            DC.Cycles += myCpu.Step(myMemory);
             DC.Instructions += 1;
             DC.Cycles += 3;
             DC.DisplayCpuData(myCpu);
