@@ -7,7 +7,7 @@ namespace _65C02WPF
     public class CPU
     {
         public int A;
-        public int X;
+        public byte X;
         public int Y;
 
         private int sp;
