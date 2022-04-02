@@ -15,13 +15,13 @@ namespace _65C02WPF
         /// Properties
         /// </summary>
         /// 
-        public int OpCode { get; private set; }
+        public byte OpCode { get; private set; }
 
         public string Mnem { get; private set; }
 
-        public int Byte1 { get; set; }
+        public byte Byte1 { get; set; }
 
-        public int Byte2 { get; set; }
+        public byte Byte2 { get; set; }
 
         public AddressMode Mode { get; private set; }
 
@@ -35,7 +35,7 @@ namespace _65C02WPF
         /// Constructor
         /// </summary>
         /// 
-        public Instruction(int opcode,
+        public Instruction(byte opcode,
                             string mnem,
                             AddressMode mode,
                             int length,

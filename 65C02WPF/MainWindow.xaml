@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:_65C02WPF"
-        Title="65C02 Emulator" Height="400" Width="800" >
+        Title="65C02 Emulator" Height="480" Width="960">
 
     <Window.DataContext>
         <local:MainWindowDataContext/>
@@ -14,11 +14,11 @@
 
     <Grid Margin="8,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
@@ -76,11 +76,11 @@
                     </StackPanel>
                 </GroupBox>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="8,0,0,0">
-                    <TextBlock TextWrapping="Wrap" Text="Instructions: " HorizontalAlignment="Right" Width="100"/>
+                    <TextBlock TextWrapping="Wrap" Text="Total Instructions: " HorizontalAlignment="Right" Width="100"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Instructions, Mode=OneWay}" IsReadOnly="True"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="8,0,0,0">
-                    <TextBlock TextWrapping="Wrap" Text="Cycles as Hex: " HorizontalAlignment="Right" Width="100"/>
+                    <TextBlock TextWrapping="Wrap" Text="Cycles executed: " HorizontalAlignment="Right" Width="100"/>
                     <TextBox TextWrapping="Wrap" Text="{Binding Cycles, Mode=OneWay}" IsReadOnly="True" />
                 </StackPanel>
 

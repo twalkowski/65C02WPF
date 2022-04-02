@@ -158,7 +158,7 @@ namespace _65C02WPF
         /// Populate the data context for the simulator with the CPU registers and flags
         /// </summary>
         /// <param name="cpu">The instance of CPU to display</param>
-        public void DisplayCpuData(CPU cpu)
+        public void ShowCpuData(CPU cpu)
         {
             Accumulator = cpu.A;
             XRegister = cpu.X;
@@ -184,7 +184,7 @@ namespace _65C02WPF
         /// <param name="mem">The Memory instance display</param>
         /// <param name="page">the 256-byte page to display</param>
         /// <returns>a string repersentation of the memory page</returns>
-        public string DisplayMemoryPageAsHexDump(Memory mem, int page)
+        public string ShowMemoryPageAsHexDump(Memory mem, int page)
         {
             StringBuilder hexString = new StringBuilder("");
             StringBuilder charString = new StringBuilder("    ");

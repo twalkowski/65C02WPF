@@ -22,16 +22,16 @@ namespace _65C02WPF
             myMemory.Initialize();
             DC.Instructions = 0;
             DC.Cycles = 0;
-            DC.DisplayCpuData(myCpu);
+            DC.ShowCpuData(myCpu);
             RefreshMemoryDisplay();
         }
 
         private void Step_Click(object sender, RoutedEventArgs e)
         {
-            DC.Cycles += myCpu.Step(myMemory);
+            DC.Cycles += myCpu.Step(ref myMemory);
             DC.Instructions += 1;
             DC.Cycles += 3;
-            DC.DisplayCpuData(myCpu);
+            DC.ShowCpuData(myCpu);
             RefreshMemoryDisplay();
         }
 
@@ -58,7 +58,7 @@ namespace _65C02WPF
 
         private void RefreshMemoryDisplay()
         {
-            DC.HexDump = DC.DisplayMemoryPageAsHexDump(myMemory, DC.Page);
+            DC.HexDump = DC.ShowMemoryPageAsHexDump(myMemory, DC.Page);
         }
 
         private void Page_Click(object sender, RoutedEventArgs e)
