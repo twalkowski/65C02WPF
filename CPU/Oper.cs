@@ -1,7 +1,7 @@
 ﻿
 namespace _65C02WPF
 {
-    public static class Operation
+    public static class Oper
     {
         public static void ADC()
         {

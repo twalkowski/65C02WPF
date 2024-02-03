@@ -30,7 +30,7 @@ namespace _65C02WPF
         {
             DC.Cycles += myCpu.Step(ref myMemory);
             DC.Instructions += 1;
-            DC.Cycles += 3;
+            //DC.Cycles += 3;
             DC.ShowCpuData(myCpu);
             RefreshMemoryDisplay();
         }

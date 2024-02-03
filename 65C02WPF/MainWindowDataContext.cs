@@ -151,6 +151,13 @@ namespace _65C02WPF
             set => Set(ref _hexDump, value);
         }
 
+        private string _disassembly;
+        public string Disassembly
+        {
+            get => _disassembly;
+            set => Set(ref _disassembly, value);
+        }
+
 
         // Public Methods
 
@@ -168,7 +175,7 @@ namespace _65C02WPF
             StatusRegister = cpu.SR;
             Address = cpu.AddressBus;
             Data = cpu.DataBus;
-
+            Disassembly = cpu.distext;
             NFlag = cpu.N;
             VFlag = cpu.V;
             BFlag = cpu.B;

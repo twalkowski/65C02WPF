@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace _65C02WPF
 {
@@ -9,39 +7,33 @@ namespace _65C02WPF
     ///
     ///-------------------------------------------------------------------------------------------------
 
-    public class Instruction
+    public struct Instruction
     {
         /// <summary>
         /// Properties
         /// </summary>
         /// 
         public byte OpCode { get; private set; }
-
         public string Mnem { get; private set; }
-
         public byte Byte1 { get; set; }
-
         public byte Byte2 { get; set; }
-
-        public AddressMode Mode { get; private set; }
-
+        public AddrMode Mode { get; private set; }
         public int Length { get; private set; }
-
         public int Cycles { get; private set; }
-
         public bool XtraCycle { get; private set; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// 
-        public Instruction(byte opcode,
-                            string mnem,
-                            AddressMode mode,
-                            int length,
-                            int cycles,
-                            bool xtraCycle,
-                            Action func)
+        public Instruction(
+            byte opcode,
+            string mnem,
+            AddrMode mode,
+            int length,
+            int cycles,
+            bool xtraCycle,
+            Action action)
         {
             OpCode = opcode;
             Mnem = mnem;
@@ -51,7 +43,7 @@ namespace _65C02WPF
             Length = length;
             Cycles = cycles;
             XtraCycle = xtraCycle;
-            //            DoWork = func;
+            DoWork = action;
         }
 
 
@@ -65,7 +57,7 @@ namespace _65C02WPF
         }
 
         public Action DoWork;
-        public Action GetAddress;
+//        public Action GetAddress;
 
         ///----------
     }
@@ -77,7 +69,7 @@ namespace _65C02WPF
     /// <remarks>    Twalk, 5/20/2017. </remarks>
     ///-------------------------------------------------------------------------------------------------
 
-    public enum AddressMode
+    public enum AddrMode
     {
         /// <summary>
         Abs,
